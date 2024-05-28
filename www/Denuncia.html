@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="cordova.js"></script>
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+    </script>
+    <style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+.header {
+  padding: 30px;
+  background-image: linear-gradient(to bottom right, #71FF65, #00FF94);
+  color: white;
+  font-size: 20px;
+}
+.content {
+    padding:20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  border-radius: 5px;
+}
+
+.content:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-image: linear-gradient(to bottom right, #71FF65, #00FF94);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #f1f1f1;
+  color: rgb(255, 255, 255);
+}
+
+.navbar a.active {
+  background-image: linear-gradient(to bottom right, #71ff65, #00FF94);
+  color: white;
+}
+</style>
+</head>
+<body>
+    <div class="header">
+        <img src="logo.png" height="40" width="80">
+    </div>
+    <div class="content">
+        <img src="" alt="Image" style="width:100%">
+    </div>
+    <div class="navbar">
+      <a><img src="image_8.png" alt="Image" height="50" width="50" style="padding-right: 10px; padding-left: 10px; padding-top: 10px;"></a>
+      <a href="GoogleMaps.html"><img src="image_6.png" alt="Image" height="50" width="50" style="padding-right: 10px; padding-top: 10px; padding-left: 10px;"></a>
+      <a><img src="exclamacao_branca.png" alt="Image" height="50" width="50" style="padding-right: 10px; padding-top: 10px; padding-left: 10px;"></a>
+      <a><img src="image_12.png" alt="Image" height="50" width="50" style="padding-right: 10px; padding-top: 10px; padding-left: 10px;"></a>
+    </div>
+</body>
+</html>

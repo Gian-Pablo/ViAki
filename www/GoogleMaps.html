@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="cordova.js"></script>
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+    </script>
+    <title>Mapa de Mongaguá</title>
+    <style>
+        /* Estilos para centralizar e dimensionar o mapa */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial; /* Adicionando a fonte Arial */
+        }
+        #map-container {
+            height: 500px; /* Altura do container do mapa */
+            display: flex;
+            justify-content: center; /* Centralizando o mapa horizontalmente */
+            align-items: center; /* Centralizando o mapa verticalmente */
+            margin-bottom: 20px; /* Espaçamento abaixo do mapa */
+        }
+        #map {
+            width: 400px; /* Largura do mapa */
+        }
+        .header {
+            padding: 30px;
+            background-image: linear-gradient(to bottom right, #71FF65, #00FF94);
+            color: white;
+            font-size: 20px;
+            text-align: center; /* Centralizando o texto do cabeçalho */
+            width: 100%; /* Adicionando largura total */
+        }
+        .content {
+            padding: 20px;
+            text-align: center; /* Centralizando o conteúdo */
+            width: 100%; /* Adicionando largura total */
+        }
+        .navbar {
+            overflow: hidden;
+            background-image: linear-gradient(to bottom right, #71FF65, #00FF94);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center; /* Centralizando itens horizontalmente */
+            align-items: center; /* Centralizando itens verticalmente */
+        }
+        .navbar a {
+            display: inline-block; /* Mudando para display inline-block para poder centralizar */
+            color: #f2f2f2;
+            text-align: center;
+            padding: 10px 10px;
+            text-decoration: none;
+            font-size: 17px;
+            margin: 0 5px; /* Espaçamento entre os itens da navegação */
+        }
+        .navbar a:hover {
+            background: #f1f1f1;
+            color: rgb(255, 255, 255);
+        }
+        .navbar a.active {
+            background-image: linear-gradient(to bottom right, #71ff65, #00FF94);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="logo.png" height="40" width="80">
+    </div>
+    <div class="content">
+        <h3>Mapa de Mongaguá</h3>
+        <!-- Div onde o mapa será renderizado -->
+        <div id="map-container">
+            <iframe 
+                id="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.0123456123554!2d-46.61992748561871!3d-24.093170984400878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58e7b0c34835%3A0x4b7f6e25ddfc55e7!2sMongagu%C3%A1%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1625224670251!5m2!1spt-BR!2sbr" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+    <div class="navbar">
+        <a><img src="image_8.png" alt="Image" height="50" width="50" style="padding-right: 3px; padding-left: 5px; padding-top: 10px;"></a>
+        <a href="GoogleMaps.html"><img src="image_6.png" alt="Image" height="50" width="50" style="padding-right: 3px; padding-top: 10px; padding-left: 3px;"></a>
+        <a><img src="image_12.png" alt="Image" height="50" width="50" style="padding-right: 3px; padding-top: 10px; padding-left: 3px;"></a>
+        <a><img src="exclamacao_branca.png" alt="Image" height="50" width="50" style="padding-right: 3px; padding-top: 10px; padding-left: 3px;"></a>
+    </div>
+</body>
+</html>
