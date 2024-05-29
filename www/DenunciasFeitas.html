@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+     body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial; 
+        }
+        .header {
+            top: 0;
+            padding: 30px;
+            background-image: linear-gradient(to bottom right, #71FF65, #00FF94);
+            color: white;
+            font-size: 20px; 
+            width: 100%;
+            position: fixed;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+        .navbar {
+            overflow: hidden;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background-image: linear-gradient(to bottom right, #71FF65, #00FF94);
+        }
+        .navbar a {
+            display: inline-block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 10px 10px;
+            text-decoration: none;
+            font-size: 17px;
+            margin: 0 5px; 
+        }
+        .navbar a:hover {
+            background: #f1f1f1;
+            color: rgb(255, 255, 255);
+        }
+        .navbar a.active {
+            background-image: linear-gradient(to bottom right, #71ff65, #00FF94);
+            color: white;
+        }
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.column {
+  float: center;
+  width: 80%;
+  padding: 35px;
+  cursor: pointer;
+  background:white; 
+  border-radius:40px;   
+}
+
+.containerTab {
+  padding: 10px;
+    background:white; 
+  border-radius:40px;   
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.closebtn {
+  float: right;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+.apoiarBtn {
+ padding: 10px;
+ width: 300px;
+ border-radius: 10px;
+}
+</style>
+</head>
+<body>
+ <div class="header">
+        <img src="logo.png" height="40" width="80">
+    </div>
+<div class="row" style="padding-top: 110px;border: 5px solid red;">
+  <div class="column" onclick="openTab('b1');">
+      <center>
+      <img src="Alagamento.png" width="300px" height="180px"/>
+      </center>
+      <h2 style="inline-block">Alagamento</h2><h3 style="inline-block">Av. Monteiro Lobato</h3><h3>Há 4km</h3>
+  </div>
+</div>
+<div id="b1" class="containerTab" style="display:none;">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <p> <img src="exclamacao_branca.png" width="35px" height="30px">
+      <button class="apoiarBtn">
+       Apoiar Reportagem
+      </button>
+      <img src="image.png" width="35px" height="30px">
+      <button class="apoiarBtn">
+      O alagamento já foi resolvida!
+      </button>
+      <h6 style="float: right"> <img src="image_21png" width="20px" height="20px"> Denunciar</h6>
+  </p>
+</div>
+<br>
+<div class="row" style="padding-bottom: 100px;border: 5px solid GREY;">
+  <div class="column" onclick="openTab('b2');">
+     <center>
+      <img src="FotoExemplo.png" width="300px" height="180px"/>
+      </center>
+      <h2 style="inline-block">Acidente</h2><h3 style="inline-block">[...]</h3><h3>[...]km</h3>
+  </div>
+
+<div id="b2" class="containerTab" style="display:none;">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+   <p> <img src="exclamacao_branca.png" width="35px" height="30px">
+      <button class="apoiarBtn">
+       Apoiar Reportagem
+      </button>
+      <img src="image.png" width="35px" height="30px">
+      <button class="apoiarBtn">
+      O alagamento já foi resolvida!
+      </button>
+      <h6 style="float: right"> <img src="image_21.png" width="20px" height="20px"> Denunciar</h6>
+  </p>
+</div>
+<br>
+<script>
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+</script>
+ <div class="navbar">
+        <a href="DenunciasFeitas.html"><img src="image_8.png" alt="Image" height="50" width="50" style="padding-right: 3px; padding-left: 5px; padding-top: 10px;"></a>
+        <a href="GoogleMaps.html"><img src="image_6.png" alt="Image" height="50" width="50" style="padding-right: 3px; padding-top: 10px; padding-left: 3px;"></a>
+        <a href="TelaInicial.html"><img src="image_12.png" alt="Image" height="50" width="50" style="padding-right: 3px; padding-top: 10px; padding-left: 3px;"></a>
+        <a href="Denunciar.html"><img src="exclamacao_branca.png" alt="Image" height="50" width="50" style="padding-right: 3px; padding-top: 10px; padding-left: 3px;"></a>
+    </div>
+</body>
+</html>
